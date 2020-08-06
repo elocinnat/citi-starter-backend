@@ -35,3 +35,8 @@ function getAllstartup(){
 //console.log(getStartByID(1))
 //console.log(getStartByName("ApplePen"))
 //console.log(getStartupByIndustry("technology"))
+exports.getAllstartup=getAllstartup
+exports.getStartByID=getStartByID
+exports.getStartupByIndustry=getStartupByIndustry
+exports.getStartupByName=getStartupByName
+exports.newstartup=newstartup
