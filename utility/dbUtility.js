@@ -1,5 +1,5 @@
 let MySql = require('sync-mysql');
-let env = require('../environments/environment.js');
+let env = require('../environments/dbEnvironment.js');
 
 console.log("env.environment.db", env.environment);
 let conn = new MySql(env.environment.db);
