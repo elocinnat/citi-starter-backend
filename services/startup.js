@@ -13,6 +13,7 @@ Date.prototype.toMysqlFormat = function() {
 function getStartByID(id){
     let query= select("startup","*", "startupID="+id.toString())
     return query[0]
+    
 }
 function newstartup(data){ // the data should follow the ["startupName","industry","description"] format
 

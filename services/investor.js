@@ -20,8 +20,8 @@ function getInvestorByID(investID){
     return reply[0]
 }
 function investedInStartup(InvestorID, startUpID, amount){
-    let date = new Date();
-    insert("investment_log",["startupID","investorID","amount","date"],[startUpID, InvestorID,amount,date.toMysqlFormat()])
+    // let date = new Date();
+    insert("investment_log",["startupID","investorID","amount"],[startUpID, InvestorID,amount])
     update_investor_queries="update investor set investedAmt = investedAmt +" +amount.toString()+" where investorID ="+InvestorID.toString()
     executeQuery(update_investor_queries)
     update_startup_queries="update startup set fundsRaised= fundsRaised+" +amount.toString()+" where startupID ="+startUpID.toString()
