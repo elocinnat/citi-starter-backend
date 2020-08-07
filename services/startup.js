@@ -28,10 +28,11 @@ function getStartupByIndustry(industry){
     return query // return all the startup with this name 
 }
 function getAllstartup(){
-    let query= select("startup","*")
+    let query= select("startup","*","")
     return query
 }
-
+startup=getAllstartup()
+console.log(startup.length)
 //newstartup(["Applepen","technology","Make pen using apple"])
 //console.log(getStartByID(1))
 //console.log(getStartByName("ApplePen"))
